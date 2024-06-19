@@ -1,0 +1,393 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import plan40 from '~/assets/images/plans/plan40.png';
+import plan80 from '~/assets/images/plans/plan80.png';
+import plan120 from '~/assets/images/plans/plan120.png';
+
+const metadata = {
+  title: 'NovusNet - Tu nueva red de internet',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contrata Ahora',
+        href: 'https://wa.me/593961886637?text=Me%20interesa%20el%20servicio%20de%20internet',
+        target: '_blank',
+        icon: 'mdi:contract-sign',
+      },
+      { text: '¿Qué plan necesitas?', href: '/#plans' },
+    ]}
+    image={{ src: '~/assets/images/hero-image2.png', alt: 'Novus net' }}
+  >
+    <Fragment slot='title'>
+      Conéctate al Futuro: <span class='hidden xl:inline'>NovusNet</span>
+      <span class='text-accent dark:text-white highlight'> <br /> Tu Conexión de Alta Velocidad </span>
+    </Fragment>
+
+    <Fragment slot='subtitle'>
+      <span class='hidden sm:inline'>
+        <span class='font-semibold'>NovusNet:</span> Internet avanzado y adaptable para hogares, negocios emergentes, empresas
+        de servicios en la nube y más.
+      </span>
+      Conéctate a la próxima generación con rapidez, fiabilidad y futuro.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id='features'
+    tagline='Características'
+    title='Lo que obtienes con NovusNet'
+    subtitle='Lo que la competencia no quiere que sepas'
+    items={[
+      {
+        title: 'Internet Ultrarápido',
+        description: 'Navega, transmite y descarga con una conexión de internet ultrarrápida y sin interrupciones.',
+        icon: 'mdi:run-fast',
+      },
+      {
+        title: 'Planes Económicos',
+        description: 'Encuentra el plan perfecto para tu presupuesto, sin comprometer la calidad del servicio.',
+        icon: 'mdi:internet',
+      },
+      {
+        title: 'Soporte técnico',
+        description:
+          'Nuestro equipo está disponible todos los días de la semana, para ayudarte con cualquier problema o duda.',
+        icon: 'mdi:support',
+      },
+      {
+        title: 'Instalación Fácil y Rápida',
+        description: 'Conéctate rápidamente con nuestro sencillo y eficiente proceso de instalación.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Conexión Fiable',
+        description:
+          'Disfruta de una conexión estable y confiable, incluso en horas pico, para que siempre estés conectado cuando más lo necesitas.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Optimizado para Hogar y Oficina',
+        description:
+          'Nuestros servicios se adaptan perfectamente a las necesidades tanto del hogar como de la oficina, ofreciendo un rendimiento superior en cualquier entorno.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id='plans'
+    isReversed
+    tagline='Los mejores planes de internet'
+    title='Descubre los planes de internet que se adaptan a tus necesidades'
+    items={[
+      {
+        title: 'Instalación gratis',
+        description:
+          'Nuestro equipo se encargará de la instalación y te ayudará con cualquier pregunta que puedas tener.',
+      },
+      {
+        title: 'Equipo Wifi',
+        description: 'Te proporcionamos un equipo wifi de alta calidad para garantizar una conexión rápida y segura.',
+      },
+      {
+        title: 'Velocidad simétrica',
+        description: 'Disfruta de una conexión ultrarrápida con velocidades de descarga y carga iguales.',
+      },
+      {
+        title: 'Servicio técnico',
+        description: 'Nuestro servicio técnico está disponible para ayudarte con cualquier problema.',
+      },
+      {
+        title: 'Estabilidad',
+        description: 'Nuestra conexión de internet es estable y confiable, incluso en horas pico.',
+      },
+    ]}
+    image={{
+      src: plan40,
+      alt: 'Plan 40 Megas Imagen',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Instalación gratis',
+        description:
+          'Nuestro equipo se encargará de la instalación y te ayudará con cualquier pregunta que puedas tener.',
+      },
+      {
+        title: 'Equipo Wifi',
+        description: 'Te proporcionamos un equipo wifi de alta calidad para garantizar una conexión rápida y segura.',
+      },
+      {
+        title: 'Velocidad simétrica',
+        description: 'Disfruta de una conexión ultrarrápida con velocidades de descarga y carga iguales.',
+      },
+      {
+        title: 'Servicio técnico',
+        description: 'Nuestro servicio técnico está disponible para ayudarte con cualquier problema.',
+      },
+      {
+        title: 'El más solicitado por nuestros clientes',
+        description:
+          'Este plan es el más popular entre nuestros clientes, ofreciendo una conexión rápida y confiable para todas sus necesidades de internet.',
+      },
+    ]}
+    image={{
+      src: plan80,
+      alt: 'Plan 80 Megas Imagen',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Instalación gratis',
+        description:
+          'Nuestro equipo se encargará de la instalación y te ayudará con cualquier pregunta que puedas tener.',
+      },
+      {
+        title: 'Equipo Wifi',
+        description: 'Te proporcionamos un equipo wifi de alta calidad para garantizar una conexión rápida y segura.',
+      },
+      {
+        title: 'Velocidad simétrica',
+        description: 'Disfruta de una conexión ultrarrápida con velocidades de descarga y carga iguales.',
+      },
+      {
+        title: 'Servicio técnico',
+        description: 'Nuestro servicio técnico está disponible para ayudarte con cualquier problema.',
+      },
+      {
+        title: 'Que nada te detenga',
+        description: `Con una conexión de 120 Megas, podrás navegar, transmitir y descargar sin interrupciones.`,
+      },
+    ]}
+    image={{
+      src: plan120,
+      alt: 'Plan 120 Megas Imagen',
+    }}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id='steps'
+    title='Solo 3 pasos para contratar'
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Selecciona tu plan</span>',
+        description:
+          'Elige el plan que mejor se adapte a tus necesidades. ¿Uso doméstico, oficina o empresa? Tenemos la solución perfecta para ti.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Llama o envía un mensaje con tu ubicación</span>',
+        description:
+          'Contáctanos para obtener más información o para programar la instalación de tu servicio de internet. ¡Estamos aquí para ayudarte!',
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Listo: <span class="font-medium">Disfruta de tu conexión</span>',
+        description:
+          'En menos de 24 horas, estarás disfrutando de una conexión rápida, confiable y segura. ¡Bienvenido a NovusNet!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/steps.png',
+      alt: 'Pasos para contratar NovusNet',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- <Features2
+    title='¿Qué puedes esperar?'
+    subtitle='Provides frequently used components for building websites using Tailwind CSS'
+    tagline='Components'
+    items={[
+      {
+        title: 'Headers',
+        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Content',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot='bg'>
+      <div class='absolute inset-0 bg-blue-50 dark:bg-transparent'></div>
+    </Fragment>
+  </Features2> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id='faqs'
+    title='¿Preguntas frecuentes?'
+    subtitle='Todas las respuestas que necesitas para comenzar con NovusNet'
+    tagline='FAQs'
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Por qué elegir NovusNet?',
+        description:
+          'Somos una empresa comprometida con la calidad y la satisfacción del cliente. Nuestros servicios de internet son rápidos, confiables y accesibles para todos. ¡Descubre la diferencia con NovusNet!',
+      },
+      {
+        title: '¿Qué necesito para comenzar?',
+        description:
+          'Todo lo que necesitas es seleccionar el plan que mejor se adapte a tus necesidades y ponerte en contacto con nosotros. Nuestro equipo se encargará de la instalación y te ayudará con cualquier pregunta que puedas tener.',
+      },
+      {
+        title: '¿Cuánto cuesta el servicio?',
+        description:
+          'Los precios varían según el plan que elijas. Contáctanos para obtener más información sobre nuestros planes y precios. ¡Estamos aquí para ayudarte a encontrar la mejor opción para ti!',
+      },
+      {
+        title: '¿Qué tan rápido es el servicio de internet de NovusNet?',
+        description:
+          'Nuestros servicios de internet son ultrarrápidos y confiables, lo que te permite navegar, transmitir y descargar con facilidad. ¡Descubre la velocidad de la próxima generación con NovusNet!',
+      },
+      {
+        title: 'Tengo otro proveedor de internet. ¿Puedo cambiarme a NovusNet?',
+        description:
+          '¡Por supuesto! Estamos aquí para ayudarte a hacer la transición sin problemas. Contáctanos para obtener más información sobre cómo cambiar a NovusNet y comenzar a disfrutar de una conexión de internet rápida y confiable.',
+      },
+      {
+        title: '¿Cambian los precios después de un tiempo?',
+        description:
+          'No, los precios de nuestros planes de internet son fijos y no cambian con el tiempo. Puedes estar seguro de que siempre pagarás el mismo precio por tu conexión de internet con NovusNet.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Todo Chillogallo', amount: 'Cubrimos' },
+      { title: 'Clientes satisfechos', amount: '+300' },
+      // { title: 'Stars', amount: '24.8K' },
+      // { title: 'Forks', amount: '10.3K' },
+      // { title: 'Users', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id='contact'
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contrata Ahora',
+        href: 'https://wa.me/593961886637?text=Me%20interesa%20el%20servicio%20de%20internet',
+        target: '_blank',
+        icon: 'mdi:contract-sign',
+      },
+    ]}
+  >
+    <Fragment slot='title'>
+      ¡Contrata tu plan de internet hoy!
+      <br class='hidden md:inline' />
+      <br class='hidden md:inline' />
+    </Fragment>
+
+    <Fragment slot='subtitle'>
+      Conéctate a la próxima generación con NovusNet y disfruta de una conexión rápida, confiable y segura.
+      <br class='hidden md:inline' />
+      <br class='hidden md:inline' />
+    </Fragment>
+  </CallToAction>
+</Layout>
